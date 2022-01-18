@@ -32,6 +32,9 @@ class OperadoresController extends Controller
 //
     }
 
+
+
+ 
     /**
      * Show the form for creating a new resource.
      *
@@ -39,7 +42,7 @@ class OperadoresController extends Controller
      */
     public function create()
     {
-        //
+        return view('operadores.create');
     }
 
     /**
@@ -50,7 +53,24 @@ class OperadoresController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nombre' => 'required',
+            'licencia' => 'required',
+            'correo' => 'required',
+            'app_usr' => 'required|unique:operadores',
+            'app_pass'
+        ]);
+
+        $operador = Operadores::create([
+           'nombre'=> $request->input('nombre'),
+           'licencia'=>$request->input('licencia'),
+           'correo'=>$request->input('correo'),
+           'app_usr'=>$request->input('app_usr'),
+           'app_pass'=>md5($request->input('correo'))
+        ]);
+
+
+        return redirect('/operadores');
     }
 
     /**

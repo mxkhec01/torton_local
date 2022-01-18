@@ -9,4 +9,12 @@ class Operadores extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nombre',
+        'licencia',
+        'correo',
+        'app_usr',
+        'app_pass'
+    ];
+
 }
