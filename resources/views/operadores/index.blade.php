@@ -23,19 +23,15 @@
 </div>
 <!-- /.content-header -->
 <div class="m-auto w-4/5 py-24">
-  <div class="pt-10"> <a
-            href="operadores/create"
-            class="border-b-2 pb-2 border-dotted italic text-gray-500"> Agregar un nuevo operador &rarr; </a> </div>
+  <div class="pt-10"> <a href="operadores/create" class="border-b-2 pb-2 border-dotted italic text-gray-500"> Agregar un nuevo operador &rarr; </a> </div>
   <div class="w-5/6 py-10">
     @foreach ($operadores as $operador)
     <div class="m-auto">
-      <div class="float-right"> <a href="operadores/{{ $operador->id }}"
-                        class="border-b-2 pb-2 border-dotted italic text-green-500"> Mostrar &rarr; </a>
+      <div class="float-right"> <a href="operadores/{{ $operador->id }}" class="border-b-2 pb-2 border-dotted italic text-green-500"> Mostrar &rarr; </a>
         <form action="/cars/{{ $operador->id }}" method="POST" class="pt-3">
           @csrf
           @method('delete')
-          <button type="submit"
-                                class="border-b-2 pb-2 border-dotted italic text-red-500 "> Delete &rarr; </button>
+          <button type="submit" class="border-b-2 pb-2 border-dotted italic text-red-500 "> Delete &rarr; </button>
         </form>
       </div>
       <span class="text-uppercase text-blue-500 font-bold text-xs italic"> Nombre: {{ $operador->nombre }} </span>
@@ -78,15 +74,11 @@
         </table>
       </div>
     </div>
+    <div class ="row">
     <div class="col-md-12 float-right offset-8">
-          <a style="float:right;" class="btn btn-primary" href="#" role="button"><i class="fas fa-plus"></i> Agregar Operador</a>
+          <a style="float:right;" class="btn btn-primary" href="operadores/create" role="button"><i class="fas fa-plus"></i> Agregar Operador</a>
       </div>
-
-
-
-
-
-
+    </div>
   </div>
 </div>
 <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">

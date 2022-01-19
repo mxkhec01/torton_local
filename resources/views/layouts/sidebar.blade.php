@@ -71,7 +71,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ asset('./index2.html') }}" class="nav-link">
+              <a href="{{ asset('operadores/create') }}" class="nav-link">
                 <i class="fas fa-plus nav-icon"></i>
                 <p>Agregar Operadores</p>
               </a>
