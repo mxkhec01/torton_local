@@ -65,7 +65,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ url('operadores') }}" class="nav-link">
+              <a href="{{ url('/operadores') }}" class="nav-link">
                 <i class="far fa-eye nav-icon"></i>
                 <p>Ver Operadores</p>
               </a>
