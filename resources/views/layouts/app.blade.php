@@ -44,6 +44,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
+
   @guest
   @yield('content')
   @else
@@ -203,6 +204,25 @@
   @include('layouts.sidebar')
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Operadores</h1>
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="{{ url('/home') }}">Inicio</a></li>
+              <li class="breadcrumb-item active">Operadores</li>
+            </ol>
+          </div>
+          <!-- /.col --> 
+        </div>
+        <!-- /.row --> 
+      </div>
+      <!-- /.container-fluid --> 
+    </div>  
   @yield('content')
   </div>
   <!-- /.content-wrapper -->
