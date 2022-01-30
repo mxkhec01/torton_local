@@ -66,7 +66,7 @@ class OperadoresController extends Controller
            'licencia'=>$request->input('licencia'),
            'correo'=>$request->input('correo'),
            'app_usr'=>$request->input('app_usr'),
-           'app_pass'=>md5($request->input('correo'))
+           'app_pass'=>md5($request->input('app_pass'))
         ]);
 
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,13 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
+
+//rutas publicas
+Route::get('usuario', [UsuarioController::class, 'index']);
+Route::post('/login',[UsuarioController::class,'login']);
+
+//Rutas protegidas
 Route::group(['middleware'=>['auth:sanctum']], function() {
-    Route::get('users/{id}', [OperadoresController::class,'search']);
+    Route::get('viajes/{id}', [UsuarioController::class,'obten_viajes']);
+    Route::post('/logout',[UsuarioController::class,'logout']);
 });
