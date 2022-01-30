@@ -72,7 +72,9 @@ class UsuarioController extends Controller
         ]);
         $user = Operadores::where('app_usr',$fields['app_usr'])->first();
         
-        if(!$user || ! md5($fields['app_pass']) == $user->app_pass ) {
+        //dd(md5($fields['app_pass']));
+
+        if(!$user ||  md5($fields['app_pass']) != $user->app_pass ) {
             //
             return response ([
                 'message' => 'Credenciales incorrectas'
